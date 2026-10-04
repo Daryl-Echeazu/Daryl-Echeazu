@@ -21,3 +21,11 @@
 <div align="center">
   <img src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,react,flask,postgres,docker,aws,gcp&theme=dark" alt="Python, PyTorch, TensorFlow, React, Flask, PostgreSQL, Docker, AWS, GCP" />
 </div>
+
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Daryl-Echeazu/Daryl-Echeazu/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Daryl-Echeazu/Daryl-Echeazu/output/snake-light.svg" />
+  <img alt="Contribution graph, eaten by a snake" src="https://raw.githubusercontent.com/Daryl-Echeazu/Daryl-Echeazu/output/snake-dark.svg" />
+</picture>
