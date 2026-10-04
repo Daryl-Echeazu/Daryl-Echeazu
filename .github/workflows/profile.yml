@@ -1,5 +1,5 @@
-# Daily contribution snake (Platane/snk), published to the `output` branch the
-# README links to.
+# Daily contribution snake (Platane/snk) with a commit tally under it
+# (tools/snake_tally.py), published to the `output` branch the README links to.
 name: Contribution snake
 
 on:
@@ -25,6 +25,18 @@ jobs:
           outputs: |
             dist/snake-dark.svg?palette=github-dark&color_snake=#E8C46A&color_dots=#161b22,#3b3220,#6b5626,#a9852f,#e8c46a
             dist/snake-light.svg?color_snake=#b8892a&color_dots=#ebedf0,#f3e3bd,#e6c97c,#d4a940,#b8892a
+
+      # snk runs in a container as root, so dist/ comes out root-owned.
+      - name: Take ownership of dist
+        run: sudo chown -R "$(id -u):$(id -g)" dist
+
+      # Swap snk's square-count bar for a commit tally (or drop the bar if
+      # snk's output ever stops matching what the script expects).
+      - name: Commit tally
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/snake_tally.py ${{ github.repository_owner }} dist/snake-dark.svg dark dist/snake-light.svg light
 
       - uses: crazy-max/ghaction-github-pages@v4
         with:
