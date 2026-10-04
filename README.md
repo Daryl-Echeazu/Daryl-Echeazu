@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.png" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.png" />
+  <img alt="El Capitan, Yosemite, in gold dots" src="assets/header-dark.png" width="100%" />
+</picture>
+
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Instrument+Serif&size=44&duration=3500&pause=800&color=E8C46A&center=true&vCenter=true&width=700&height=70&lines=Mostly+building%2C;occasionally+touching+grass...;occasionally+hooping...;occasionally+zetamaccing..." alt="Mostly building, occasionally touching grass..." />
 
@@ -23,6 +29,29 @@
 </div>
 
 <br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Daryl-Echeazu/Daryl-Echeazu/output/candles-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Daryl-Echeazu/Daryl-Echeazu/output/candles-light.svg" />
+  <img alt="Contributions as weekly trading candles" src="https://raw.githubusercontent.com/Daryl-Echeazu/Daryl-Echeazu/output/candles-dark.svg" width="100%" />
+</picture>
+
+<p align="center">
+  <a href="https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/on-repeat-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="assets/on-repeat-light.svg" />
+      <img alt="On repeat: Blinding Lights by The Weeknd" src="assets/on-repeat-dark.svg" width="44%" />
+    </picture>
+  </a>
+  <a href="https://darylecheazu.me">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Daryl-Echeazu/Daryl-Echeazu/output/lighthouse-dark.svg" />
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Daryl-Echeazu/Daryl-Echeazu/output/lighthouse-light.svg" />
+      <img alt="Lighthouse scores for darylecheazu.me" src="https://raw.githubusercontent.com/Daryl-Echeazu/Daryl-Echeazu/output/lighthouse-dark.svg" width="54%" />
+    </picture>
+  </a>
+</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Daryl-Echeazu/Daryl-Echeazu/output/snake-dark.svg" />
