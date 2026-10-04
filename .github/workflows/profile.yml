@@ -1,10 +1,6 @@
-# Daily profile images, published to the `output` branch the README links to:
-#   snake-*.svg       contribution graph eaten by a snake (Platane/snk)
-#   candles-*.svg     contributions as weekly trading candles (tools/candles.py)
-#   lighthouse-*.svg  Lighthouse scores for darylecheazu.me (tools/lighthouse_card.py)
-# The deploy replaces the whole branch, so if a generator fails, the previous
-# day's image is copied forward instead of disappearing.
-name: Profile images
+# Daily contribution snake (Platane/snk), published to the `output` branch the
+# README links to.
+name: Contribution snake
 
 on:
   schedule:
@@ -29,33 +25,6 @@ jobs:
           outputs: |
             dist/snake-dark.svg?palette=github-dark&color_snake=#E8C46A&color_dots=#161b22,#3b3220,#6b5626,#a9852f,#e8c46a
             dist/snake-light.svg?color_snake=#b8892a&color_dots=#ebedf0,#f3e3bd,#e6c97c,#d4a940,#b8892a
-
-      # snk runs in a container as root, so dist/ comes out root-owned.
-      - name: Take ownership of dist
-        run: sudo chown -R "$(id -u):$(id -g)" dist
-
-      - name: Candles
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 tools/candles.py ${{ github.repository_owner }} dist
-
-      - name: Lighthouse
-        continue-on-error: true
-        run: |
-          npx -y lighthouse@12 https://darylecheazu.me/ --quiet \
-            --chrome-flags="--headless=new --no-sandbox" \
-            --only-categories=performance,accessibility,best-practices,seo \
-            --output=json --output-path=lh.json
-          python3 tools/lighthouse_card.py lh.json dist
-
-      - name: Keep yesterday's image for anything that failed
-        run: |
-          base=https://raw.githubusercontent.com/${{ github.repository }}/output
-          for f in snake-dark snake-light candles-dark candles-light lighthouse-dark lighthouse-light; do
-            [ -s "dist/$f.svg" ] || curl -sfL "$base/$f.svg" -o "dist/$f.svg" || echo "no previous $f"
-          done
-          ls -la dist
 
       - uses: crazy-max/ghaction-github-pages@v4
         with:
