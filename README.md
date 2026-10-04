@@ -9,3 +9,15 @@
     <a href="mailto:darecheazu@uchicago.edu">Email</a>
   </p>
 </div>
+
+<br>
+
+**Now** — Gemini Enterprise Agents at Google Cloud. P&L infrastructure with Oracle Trading.<br>
+**Before** — ML at Apple, generative AI at Scale AI, alloy research at Texas A&M.<br>
+**Otherwise** — Zetamac (PB 125), the gym, Yosemite when I can get there.
+
+<br>
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,react,flask,postgres,docker,aws,gcp&theme=dark" alt="Python, PyTorch, TensorFlow, React, Flask, PostgreSQL, Docker, AWS, GCP" />
+</div>
